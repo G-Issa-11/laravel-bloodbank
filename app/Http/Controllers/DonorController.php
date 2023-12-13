@@ -53,6 +53,11 @@ class DonorController extends Controller
         $donor->update($incomingfields);
         return redirect('/donor-records');
     }
+
+    public function clearTable(){
+        Donor::truncate();
+        return redirect('/donor-records');
+}
     
 
 }

@@ -56,6 +56,7 @@
     
                 <button class="submit" type="submit">Submit</button>
             </form>
+            <p class="delete-btn"><a href="{{route('donor.reset')}}">Delete Table</a></p>
         <table>
                 <thead>
                     <tr>
@@ -97,6 +98,7 @@
                     @endforeach
                 </tbody>
             </table>
+        
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 

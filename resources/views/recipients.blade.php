@@ -54,12 +54,12 @@
                     <option value="8">O-</option>
                 </select>
     
-                <label for="date_of_birth">Last Donation Date:</label>
+                <label for="date_of_birth">Date of Birth:</label>
                 <input type="date" name="date_of_birth" required>
     
                 <button class="submit" type="submit">Submit</button>
             </form>
-
+            <p class="delete-btn"><a href="{{route('recipient.reset')}}">Delete Table</a></p>
             <table>
                     <thead>
                         <tr>

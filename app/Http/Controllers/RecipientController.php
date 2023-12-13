@@ -38,4 +38,8 @@ class RecipientController extends Controller
         return redirect('/recipient-records');
     }
     
+    public function clearTable(){
+        Recipient::truncate();
+        return redirect('/recipient-records');
+}
 }

@@ -27,4 +27,9 @@ class DonationController extends Controller
     {
         return $this->belongsTo(Donor::class, 'donor_id', 'personal_id');
     }
+
+    public function clearTable(){
+        Donation::truncate();
+        return redirect('/donation-records');
+}
 }

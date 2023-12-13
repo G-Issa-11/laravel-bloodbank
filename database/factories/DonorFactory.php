@@ -2,13 +2,14 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Donor;
 use App\Model;
 use App\BloodGroup;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Donor::class, function (Faker $faker) {
     // Assuming bloodgroups table is already populated
-    $bloodGroupIds = App\Models\BloodGroup::pluck('id')->toArray();
+    $bloodGroupIds = BloodGroup::pluck('id')->toArray();
 
     return [
         'personal_id' => $faker->unique()->uuid,

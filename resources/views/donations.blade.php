@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url('/css/common.css') }}" />
 </head>
 <body>
+        <p class="delete-btn"><a href="{{route('donation.reset')}}">Delete Table</a></p>
         <table>
                 <thead>
                     <tr>
@@ -21,11 +22,11 @@
                 <tbody>
                     @foreach($donations as $donation)
                         <tr>
-                            <td>{{ $donation->staff_id }}</td>
+                            <td>{{ $donation->staff_id}}</td>
                             <td>{{ $donation->donor_id }}</td>
                             <td>{{ $donation->units_donated}}</td>
                             <td>{{ $donation->donation_date }}</td>
-                            <td>{{ $donation->bloodgroup_id}}</td>
+                            <td>{{ $donation->bloodGroup->bloodGroupName}}</td>
 
                         </tr>
                     @endforeach

@@ -27,14 +27,17 @@ Route::post('/donors/store', [DonorController::class, 'store'])->name('donor.sto
 Route::delete('/donors/delete/{donor}', [DonorController::class, 'deleteDonor'])->name('donor.delete');
 Route::get('/edit-donor/{donor}', [DonorController::class, 'showEditScreen']);
 Route::put('/edit-donor/{donor}', [DonorController::class, 'actuallyUpdateDonorInfo']);
+Route::get('/donors/reset', [DonorController::class, 'clearTable'])->name('donor.reset');
 
 // Recipient related routes
 Route::get('/recipient-records', [RecipientController::class, 'index'])->name('recipient.records');
 Route::post('/recipient/store', [RecipientController::class, 'store'])->name('recipient.store');
 Route::delete('/recipient/delete/{recipient}', [RecipientController::class, 'deleteRecipient'])->name('recipient.delete');
+Route::get('/recipients/reset', [RecipientController::class, 'clearTable'])->name('recipient.reset');
 
 // Donations related routes
 Route::get('/donation-records', [DonationController::class, 'index'])->name('donation.records');
+Route::get('/donations/reset', [DonationController::class, 'clearTable'])->name('donation.reset');
 
 // Staff related routes
 Route::get('/staff-records', [StaffController::Class, 'index'])->name('staff.records');

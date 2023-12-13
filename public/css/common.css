@@ -85,3 +85,14 @@ th {
     color: #fff;
     text-align: center;
 }
+.delete-btn {
+    margin: 10px;
+    color: #e6231b;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.delete-btn a {
+    text-decoration: none;
+}

@@ -3,9 +3,10 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Model;
+use App\Staff;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Staff::class, function (Faker $faker) {
     return [
         'staff_id' => $faker->unique()->randomNumber(5),
         'first_name' => $faker->firstName,

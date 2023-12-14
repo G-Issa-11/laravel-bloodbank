@@ -14,12 +14,12 @@
         
     </head>
     <body id="welcome">
-        <h1>Welcome to our Simple Blood Bank Manager!</h1>
+        <h1>Welcome to our Simple Blood Bank Admin Panel!</h1>
         <a href="{{ route('donor.records') }}" class="btn btn-default">Donor Records</a>
         <a href="{{ route('recipient.records') }}" class="btn btn-default">Recepient Records</a>
         <a href="{{ route('donation.records') }}" class="btn btn-default">Donation Records</a>
     <a href="{{route('staff.records')}}" class="btn btn-default">Staff Records</a>
-        <a class="btn btn-default">Blood Groups</a>
+    <a href="{{route('bloodgroup.records')}}" class="btn btn-default">Blood Groups</a>
         @include('footer')
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

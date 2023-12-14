@@ -5,6 +5,7 @@ use App\Http\Controllers\DonorController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\RecipientController;
+use App\Http\Controllers\BloodGroupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,9 @@ Route::get('/donations/reset', [DonationController::class, 'clearTable'])->name(
 
 // Staff related routes
 Route::get('/staff-records', [StaffController::Class, 'index'])->name('staff.records');
+Route::post('/staff/store', [StaffController::class, 'store'])->name('staff.store');
+Route::delete('/staff/delete/{staff}' , [StaffController::class, 'deleteStaffMember'])->name('staff.delete');
+Route::get('/staff/reset', [StaffController::class, 'clearTable'])->name('staff.reset');
+
+//blood groups related routes
+Route::get('/bloodgroups-records', [BloodGroupController::class, 'index'])->name('bloodgroup.records');
